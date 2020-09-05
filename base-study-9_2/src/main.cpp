@@ -48,7 +48,7 @@ void setup() {
   delay(1000);
   fuckservo.detach();
    
-  Serial.begin(9600);
+  Serial.begin(115200,SERIAL_8E2);
 //put your setup code here, to run once:
 }
 
@@ -99,7 +99,7 @@ if(flag){
  digitalWrite(m1,LOW);
  if(SW1==0){
    flag2=false;
-   Serial.write("B");
+   //Serial.write("B");
  }
 }else if(flag3){
   fuckservo.attach(sv);
@@ -120,7 +120,7 @@ if(flag){
    fuckservo.attach(sv);
    fuckservo.write(0);
    fuckservo.detach();
-   Serial.write("D");
+   //Serial.write("D");
    delay(500);
    software_reset();
 }else{
@@ -136,7 +136,7 @@ if (rotation < target){
   analogWrite(m1,0);
   digitalWrite(m2,LOW);
   flag=false;
-  Serial.write("A");
+  //Serial.write("A");
  }
 }
 void Encoder(){
